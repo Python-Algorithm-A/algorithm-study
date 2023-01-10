@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+n, m = map(int, input().split()) # A배열의 크기, B배열의 크기
 
 arrA = list(map(int, input().split()))
 arrB = list(map(int, input().split()))
@@ -13,7 +13,7 @@ while True:
             result.extend(arrB[j:])
         elif i<n and j>=m:
             result.extend(arrA[i:])
-        break # 두 배열 모두 끝 점에 닿는 경우
+        break
 
     # 포인터가 가리키는 숫자를 비교
     if arrA[i]> arrB[j]:
