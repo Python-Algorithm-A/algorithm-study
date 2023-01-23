@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**7) # 제귀 허용치를 넓혀줌
+sys.setrecursionlimit(10**7) # 재귀 허용치를 넓혀줌
 input = sys.stdin.readline
 
 n, m = map(int,input().split()) # 정점의 갯수, 간선의 갯수
