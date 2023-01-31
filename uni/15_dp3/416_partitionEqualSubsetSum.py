@@ -18,8 +18,8 @@ def findMin(a, n):
 
     return dp[n][half_sum]
 
-nums = list(map(int, input().split()))
-#nums = [3, 7, 2, 4]
+#nums = list(map(int, input().split()))
+nums = [3, 7, 2, 4]
 n = len(nums)
 if sum(nums) % 2 != 0: # 원소의 총 합이 홀수이면 false
     print(False)
