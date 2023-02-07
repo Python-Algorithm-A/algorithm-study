@@ -1,6 +1,8 @@
 import bisect
 n = int(input())
 
+#3 ,7 ,5, 2, 6, 1, 4
+#3, 5, 6
 arr=[]
 dp=[]
 for _ in range(n):
