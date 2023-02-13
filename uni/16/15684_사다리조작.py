@@ -1,12 +1,12 @@
 import sys
 input = sys.stdin.readline
 
-n, m, h = map(int, input().split()) # 세로선, 가로선, 가로선을 놓을 수 있는 갯
+n, m, h = map(int, input().split()) # 세로선, 가로선, 가로선을 놓을 수 있는 갯수
 
 # 2차원 배열 초기화
 d = [[0] * (n+1) for _ in range(h+1)]
 
-# 고정 사타리 넣기
+# 고정 사다리 넣기
 for _ in range(m):
     a, b = map(int, input().split())
     d[a][b]=1
@@ -35,7 +35,6 @@ def can_install(x, y):
     else:
         if d[x][y + 1] == 1 or d[x][y - 1] == 1:  # 양 옆에 사다리가 1개라도 있을 경우
             return False
-
     return True
 
 
