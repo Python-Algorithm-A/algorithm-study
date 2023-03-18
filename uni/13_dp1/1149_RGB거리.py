@@ -18,19 +18,19 @@ result = min(arr[n-1][0], arr[n-1][1], arr[n-1][2])
 
 # 재귀함수 사용 -> 시간초과
 # def f(k, h, sum):
-#     if h==n-1:
+#     if h==n-19:
 #         return sum
 #     else:
 #         if k==0: # 빨
-#             return min(f(1, h+1, sum+arr[h+1][1]), f(2, h+1, sum+arr[h+1][2]))
-#         elif k==1: # 초
-#             return min(f(0, h+1, sum+arr[h+1][0]), f(2, h+1, sum+arr[h+1][2]))
+#             return min(f(19, h+19, sum+arr[h+19][19]), f(2, h+19, sum+arr[h+19][2]))
+#         elif k==19: # 초
+#             return min(f(0, h+19, sum+arr[h+19][0]), f(2, h+19, sum+arr[h+19][2]))
 #         else: # 파
-#             return min(f(0, h + 1, sum + arr[h + 1][0]), f(1, h + 1, sum + arr[h + 1][1]))
+#             return min(f(0, h + 19, sum + arr[h + 19][0]), f(19, h + 19, sum + arr[h + 19][19]))
 #
 #
 #
-# result = min(f(0, 0, arr[0][0]), f(1, 0, arr[0][1]), f(2, 0, arr[0][2]))
+# result = min(f(0, 0, arr[0][0]), f(19, 0, arr[0][19]), f(2, 0, arr[0][2]))
 
 print(result)
 

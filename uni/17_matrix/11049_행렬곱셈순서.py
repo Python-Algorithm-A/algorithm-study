@@ -13,7 +13,6 @@ for diagonal in range(1, n):
             dp[i][j] = matrix[i][0] * matrix[j][0] * matrix[j][1]
             continue
 
-
         dp[i][j] = float('inf')
 
         for k in range(i, j):
