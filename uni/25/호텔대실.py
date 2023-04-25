@@ -1,6 +1,5 @@
 from heapq import heappop, heappush
 
-
 def solution(book_time):
     answer = 1
 
