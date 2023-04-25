@@ -7,7 +7,7 @@ input = sys.stdin.readline
 def fish(j):
     for i in range(R):
         if board[i][j]:
-            x = board[i][j][2]
+            x = board[i][j][2] # 상어크기
             board[i][j] = 0 # 상어 잡아서 없앰
             return x
     return 0
@@ -50,13 +50,12 @@ def get_next_loc(i, j, speed, dir):
         return (speed, j, DOWN)
 
     # 0, 1, 2, 3, 4, 5, 4, 3, 2, 1 이렇게 이동 cycle = 10
-    # 지금 상어가 어디에 있는 0에 있도록 바꿈 (speed를 변경해서)
+    # 지금 상어가 어디에 있던지, 0에 위치하도록 함  (speed를 변경해서)
     # 방향이 오른쪽 이라면 speed+=j
     # 방향이 왼쪽 이라면 speed += 2 *(c-1) - j
     # 나눗셈을 해서
     #   나머지가 0~5 까지라면 j = 나머지, 그리고 방향은 오른쪽
     #   6이상이라면 갔다가 돌아오는 거니까 방향은 왼쪽 j = cycle - speed
-
     else:
         cycle = C * 2 - 2
         if dir == LEFT:
@@ -66,7 +65,7 @@ def get_next_loc(i, j, speed, dir):
 
         speed %= cycle
         if speed >= C:
-            return (i, 2 * C - 2 - speed, LEFT)
+            return (i, cycle - speed, LEFT)
         return (i, speed, RIGHT)
 
 
